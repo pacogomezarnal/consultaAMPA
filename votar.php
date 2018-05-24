@@ -3,7 +3,7 @@
 $incorrecto=true;
 $mensaje="";
 if(!isset($_POST["dni"])){
-  $mensaje="No se ha introducido el DNI";
+  $mensaje="No se ha instroduit el DNI";
 }else{
   //Comprobamos que el DNI está en la base de datos
   $mysqli = new mysqli("localhost", "root", "", "ampaplatero");
@@ -16,7 +16,7 @@ if(!isset($_POST["dni"])){
         $padre=$resultado->fetch_assoc();
         $incorrecto=false;
       }else{
-        $mensaje="Tu DNI no está en nuestro listado. Intentalo de nuevo o vota en papel";
+        $mensaje="Tu DNI no està a la nostra llista. Prova de nou o  utilitza la papereta";
       }
   }
 }
@@ -43,8 +43,8 @@ if($incorrecto){
             <p>
               <label class="w3-text-black">Horari proposat: els matins es mantenen igual sols es modifica l’horari de les vesprades de dilluns a dijous de 15:00 a 16:30.</label>
               <br>
-              <input type="radio" name="eleccion" value="si"> SI <br>
-              <input type="radio" name="eleccion" value="no"> NO <br>
+              <input class="w3-radio" type="radio" name="eleccion" value="si"> SI <br>
+              <input class="w3-radio" type="radio" name="eleccion" value="no"> NO <br>
               <input type="hidden" name="dni" value="<?=$dni?>">
             </p>
             <p><input type="submit" class="w3-btn w3-padding w3-blue" value="OPINAR"></p>

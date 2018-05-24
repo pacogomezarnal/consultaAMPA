@@ -24,10 +24,10 @@
         <div class="w3-container w3-xxxlarge">
           <form class="w3-container" action="votar.php" method="post">
             <p>
-              <label class="w3-text-grey">Introduce tu DNI con la letra</label>
+              <label class="w3-text-grey">Introduïx el teu DNI amb la lletra</label>
               <input class="w3-input w3-border" type="text" required="" name="dni">
             </p>
-            <p><input type="submit" class="w3-btn w3-padding w3-blue" value="SIGUIENTE"></p>
+            <p><input type="submit" class="w3-btn w3-padding w3-blue" value="SEGÜENT"></p>
           </form></p>
         </div>
         <footer class="w3-container w3-blue w3-center">

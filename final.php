@@ -19,7 +19,7 @@ if(!isset($_POST["dni"])){
         $resultado=$mysqli->query("UPDATE padres set voto='".$_POST["eleccion"]."' ,fecha='".date("Y-m-d H:i:s")."' where dni='".$_POST["dni"]."'");
         if($resultado){
           $incorrecto=false;
-          $mensaje="TU VOTO HA SIDO ALMACENADO";
+          $mensaje="TU OPINIÓ HA SIGUT COMPUTADA";
         }else{
           $mensaje="En estos momentos no podemos almacenar tu voto. Prueba en 5 minutos";
         }
@@ -45,7 +45,7 @@ if($incorrecto){
           <h1 w3-xxxlarge><?=$mensaje?></h1>
         </header>
         <div class="w3-container w3-xxxlarge">
-          <h1>Tus datos y tu voto es totalmente anónimo</h1>
+          <h1>Les teues dades i la teua opinió es totalment anònim</h1>
           <h1>DNI: <?=$_POST["dni"]?></h1>
           <h1>Tu opinió: <?=$_POST["eleccion"]?></h1>
           <h1>FECHA: <?=date("Y-m-d H:i:s")?></h1>
