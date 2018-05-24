@@ -10,12 +10,13 @@ if(!isset($_POST["dni"])){
   if ($mysqli->connect_errno) {
       $mensaje="En estos momentos no podemos almacenar tu voto. Prueba en 5 minutos";
   }else{
-      $resultado=$mysqli->query("SELECT nombre from padres where dni=".$_POST["dni"]);
+      $dni=strtoupper($_POST["dni"]);
+      $resultado=$mysqli->query("SELECT dni from padres where dni='".$dni."'");
       if($resultado->num_rows>0){
         $padre=$resultado->fetch_assoc();
         $incorrecto=false;
       }else{
-        $mensaje="Tu DNI no está en nuestro listado";
+        $mensaje="Tu DNI no está en nuestro listado. Intentalo de nuevo o vota en papel";
       }
   }
 }
@@ -32,27 +33,27 @@ if($incorrecto){
     <link rel="stylesheet" href="/css/estilos.css">
   </head>
   <body>
-    <div class="w3-row w3-padding-24">
-      <div class="w3-container w3-quarter"></div>
-      <div class="w3-containe  w3-half w3-card-4">
+    <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
+      <div class="w3-card-4">
         <header class="w3-container w3-blue">
-          <h1>Consulta del AMPA Platero y Yo</h1>
+          <h1>DNI: <?=$dni?></h1>
         </header>
         <div class="w3-container">
-          <form class="w3-color-container" action="final.php" method="post">
-            <p class="w3-khaki"><?=$padre["nombre"]?></p>
+          <form class="w3-color-container w3-xlarge" action="final.php" method="post">
             <p>
-              <label class="w3-text-grey">Quieres que el colegio adopte el nuevo horario</label>
+              <label class="w3-text-black">Horari proposat: els matins es mantenen igual sols es modifica l’horari de les vesprades de dilluns a dijous de 15:00 a 16:30.</label>
               <br>
               <input type="radio" name="eleccion" value="si"> SI <br>
               <input type="radio" name="eleccion" value="no"> NO <br>
-              <input type="hidden" name="dni" value="<?=$_POST["dni"]?>">
+              <input type="hidden" name="dni" value="<?=$dni?>">
             </p>
             <p><input type="submit" class="w3-btn w3-padding w3-blue" value="VOTAR"></p>
           </form></p>
         </div>
+        <footer class="w3-container w3-blue w3-center">
+          <img src="img/logo_ampa.jpg" alt="AMPA" width="25%">
+        </footer>
       </div>
-      <div class="w3-container w3-quarter"></div>
     </div>
   </body>
 </html>

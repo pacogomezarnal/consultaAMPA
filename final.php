@@ -10,13 +10,13 @@ if(!isset($_POST["dni"])){
       $mensaje="En estos momentos no podemos almacenar tu voto. Prueba en 5 minutos";
   }else{
       //Comprobamos que el DNI no haya votado
-      $resultado=$mysqli->query("SELECT voto from padres where dni=".$_POST["dni"]);
+      $resultado=$mysqli->query("SELECT voto from padres where dni='".$_POST["dni"]."'");
       $voto=$resultado->fetch_assoc();
       if(strlen($voto["voto"])>0)
       {
         $mensaje="Este DNI ya ha VOTADO";
       }else{
-        $resultado=$mysqli->query("UPDATE padres set voto='".$_POST["eleccion"]."' ,fecha='".date("Y-m-d H:i:s")."' where dni=".$_POST["dni"]);
+        $resultado=$mysqli->query("UPDATE padres set voto='".$_POST["eleccion"]."' ,fecha='".date("Y-m-d H:i:s")."' where dni='".$_POST["dni"]."'");
         if($resultado){
           $incorrecto=false;
           $mensaje="TU VOTO HA SIDO ALMACENADO";
@@ -27,7 +27,7 @@ if(!isset($_POST["dni"])){
   }
 }
 if($incorrecto){
-  //header('Location: index.php?m='.$mensaje);
+  header('Location: index.php?m='.$mensaje);
 }
 ?>
 <!DOCTYPE html>
@@ -39,17 +39,21 @@ if($incorrecto){
     <link rel="stylesheet" href="/css/estilos.css">
   </head>
   <body>
-    <div class="w3-row w3-padding-24">
-      <div class="w3-container w3-quarter"></div>
-      <div class="w3-containe  w3-half w3-card-4">
-        <header class="w3-container w3-blue">
-          <h1>Consulta del AMPA Platero y Yo</h1>
+    <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
+      <div class="w3-card-4">
+        <header class="w3-container <?php echo ($incorrecto)?"w3-red":"w3-green";?>">
+          <h1><?=$mensaje?></h1>
         </header>
-        <div class="w3-container">
-          <h1 class="<?php echo ($incorrecto)?"w3-red":"w3-green";?>"><?=$mensaje?></h1>
+        <div class="w3-container w3-xlarge">
+          <h1>Tus datos y tu voto es totalmente anónimo</h1>
+          <h1>DNI: <?=$_POST["dni"]?></h1>
+          <h1>VOTO: <?=$_POST["eleccion"]?></h1>
+          <h1>FECHA: <?=date("Y-m-d H:i:s")?></h1>
         </div>
       </div>
-      <div class="w3-container w3-quarter"></div>
+      <footer class="w3-container w3-blue w3-center">
+        <img src="img/logo_ampa.jpg" alt="AMPA" width="25%">
+      </footer>
     </div>
   </body>
 </html>
