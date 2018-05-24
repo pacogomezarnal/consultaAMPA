@@ -14,7 +14,7 @@ if(!isset($_POST["dni"])){
       $voto=$resultado->fetch_assoc();
       if(strlen($voto["voto"])>0)
       {
-        $mensaje="Este DNI ya ha VOTADO";
+        $mensaje="Aquest DNI ja ha opinat";
       }else{
         $resultado=$mysqli->query("UPDATE padres set voto='".$_POST["eleccion"]."' ,fecha='".date("Y-m-d H:i:s")."' where dni='".$_POST["dni"]."'");
         if($resultado){
