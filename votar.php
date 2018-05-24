@@ -30,7 +30,7 @@ if($incorrecto){
     <meta charset="utf-8">
     <title>Consulta Horario AMPA Platero y yo</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
     <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
@@ -43,8 +43,8 @@ if($incorrecto){
             <p>
               <label class="w3-text-black">Horari proposat: els matins es mantenen igual sols es modifica l’horari de les vesprades de dilluns a dijous de 15:00 a 16:30.</label>
               <br>
-              <input class="w3-radio" type="radio" name="eleccion" value="si"> SI <br>
-              <input class="w3-radio" type="radio" name="eleccion" value="no"> NO <br>
+              <input class="radio" type="radio" name="eleccion" value="si"> SI <br>
+              <input class="radio" type="radio" name="eleccion" value="no"> NO <br>
               <input type="hidden" name="dni" value="<?=$dni?>">
             </p>
             <p><input type="submit" class="w3-btn w3-padding w3-blue" value="OPINAR"></p>

@@ -45,10 +45,9 @@ if($incorrecto){
           <h1 w3-xxxlarge><?=$mensaje?></h1>
         </header>
         <div class="w3-container w3-xxxlarge">
-          <h1>Les teues dades i la teua opinió es totalment anònim</h1>
           <h1>DNI: <?=$_POST["dni"]?></h1>
-          <h1>Tu opinió: <?=$_POST["eleccion"]?></h1>
-          <h1>FECHA: <?=date("Y-m-d H:i:s")?></h1>
+          <h1>OPINIÓ: <?=$_POST["eleccion"]?></h1>
+          <h1>DATA: <?=date("Y-m-d H:i:s")?></h1>
         </div>
       </div>
       <footer class="w3-container w3-blue w3-center">
