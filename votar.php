@@ -39,7 +39,7 @@ if($incorrecto){
           <h1>DNI: <?=$dni?></h1>
         </header>
         <div class="w3-container">
-          <form class="w3-color-container w3-xlarge" action="final.php" method="post">
+          <form class="w3-color-container w3-xxxlarge" action="final.php" method="post">
             <p>
               <label class="w3-text-black">Horari proposat: els matins es mantenen igual sols es modifica l’horari de les vesprades de dilluns a dijous de 15:00 a 16:30.</label>
               <br>
@@ -47,7 +47,7 @@ if($incorrecto){
               <input type="radio" name="eleccion" value="no"> NO <br>
               <input type="hidden" name="dni" value="<?=$dni?>">
             </p>
-            <p><input type="submit" class="w3-btn w3-padding w3-blue" value="VOTAR"></p>
+            <p><input type="submit" class="w3-btn w3-padding w3-blue" value="OPINAR"></p>
           </form></p>
         </div>
         <footer class="w3-container w3-blue w3-center">

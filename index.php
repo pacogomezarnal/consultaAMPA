@@ -10,7 +10,7 @@
     <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
       <div class="w3-card-4 w3-xxxlarge">
         <header class="w3-container w3-blue w3-xxxlarge">
-          <h4>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</h4>
+          <h4 w3-xxxlarge>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</h4>
         </header>
         <header class="w3-container w3-red w3-xxlarge">
           <?php

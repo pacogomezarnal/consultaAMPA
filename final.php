@@ -42,12 +42,12 @@ if($incorrecto){
     <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
       <div class="w3-card-4">
         <header class="w3-container <?php echo ($incorrecto)?"w3-red":"w3-green";?>">
-          <h1><?=$mensaje?></h1>
+          <h1 w3-xxxlarge><?=$mensaje?></h1>
         </header>
-        <div class="w3-container w3-xlarge">
+        <div class="w3-container w3-xxxlarge">
           <h1>Tus datos y tu voto es totalmente anónimo</h1>
           <h1>DNI: <?=$_POST["dni"]?></h1>
-          <h1>VOTO: <?=$_POST["eleccion"]?></h1>
+          <h1>Tu opinió: <?=$_POST["eleccion"]?></h1>
           <h1>FECHA: <?=date("Y-m-d H:i:s")?></h1>
         </div>
       </div>
