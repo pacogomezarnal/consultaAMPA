@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Consulta Horario AMPA Platero y yo</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
     <link rel="stylesheet" href="/css/estilos.css">
   </head>
   <body>
-    <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
-      <div class="w3-card-4">
-        <header class="w3-blue w3-center">
-          <h1 w3-xxxlarge>Consulta no vinculant</h1>
-        </header>
-        <div class="w3-container w3-xxxlarge">
-          <h1>EL DILLUNS 28 DE MAIG DE 09:00 a 17:00 podeu expresar la vostra opinió telemàticament</h1>
-        </div>
-      </div>
-      <footer class="w3-container w3-blue w3-center">
-        <img src="img/logo_ampa.jpg" alt="AMPA" width="25%">
-      </footer>
+    <header class="w3-top w3-bar w3-theme w3-center">
+      <h1 class="w3-bar-item">Consulta no vinculant</h1>
+    </header>
+    <div class="w3-container w3-center" style="margin-top:90px">
+      <hr>
+      <h1 w3-xxxlarge>Consulta no vinculant</h1>
     </div>
+    <footer class="w3-container w3-bottom w3-theme w3-margin-top w3-center">
+      <img  class="" src="img/logo_ampa.jpg" alt="AMPA" width="25%">
+    </footer>
   </body>
 </html>
