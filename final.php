@@ -19,7 +19,7 @@ if(!isset($_POST["dni"])){
         $resultado=$mysqli->query("UPDATE padres set voto='".$_POST["eleccion"]."' ,fecha='".date("Y-m-d H:i:s")."' where dni='".$_POST["dni"]."'");
         if($resultado){
           $incorrecto=false;
-          $mensaje="LA TEUA OPINIÓ HA SIGUT COMPUTADA";
+          $mensaje="La teua opinió ha sigut computada";
         }else{
           $mensaje="En estos momentos no podemos almacenar tu voto. Prueba en 5 minutos";
         }
