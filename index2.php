@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Consulta Horario AMPA Platero y yo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
   </head>
@@ -25,7 +26,7 @@
     <div class="w3-container w3-center" style="margin-top:90px">
       <p>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</p>
     </div>
-    <div class="w3-container" style="margin-top:90px">
+    <div class="w3-container">
       <form  action="votar.php" method="post">
         <p>
           <label class="w3-text-grey">Introduïx el teu DNI amb la lletra</label>
