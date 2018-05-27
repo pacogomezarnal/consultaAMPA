@@ -23,9 +23,10 @@
       ?>
     </header>
     <div class="w3-container w3-center" style="margin-top:90px">
-      <hr>
       <p>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</p>
-      <form class="w3-container" action="votar.php" method="post">
+    </div>
+    <div class="w3-container" style="margin-top:90px">
+      <form  action="votar.php" method="post">
         <p>
           <label class="w3-text-grey">Introduïx el teu DNI amb la lletra</label>
           <input class="w3-input w3-border" type="text" required="" name="dni">
