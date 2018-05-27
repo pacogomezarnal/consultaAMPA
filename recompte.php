@@ -32,8 +32,8 @@ if($incorrecto){
       <h2 class="w3-bar-item w3-center">Recompte</h2>
     </header>
     <div class="w3-container" style="margin-top:120px">
-      <h2>SI: <?=$votoSI?></h2>
-      <h2>NO: <?=$votoNO?></h2>
+      <h2>SI: <?=$votoSI["si"]?></h2>
+      <h2>NO: <?=$votoNO["no"]?></h2>
     </div>
     <footer class="w3-container w3-bottom w3-theme w3-margin-top w3-center">
       <img  class="" src="img/logo_ampa.jpg" alt="AMPA" width="100%">
