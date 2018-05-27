@@ -5,36 +5,36 @@
     <title>Consulta Horario AMPA Platero y yo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
   </head>
   <body>
-    <div class="w3-row w3-padding-24 w3-margin-right w3-margin-left">
-      <div class="w3-card-4 w3-xxxlarge">
-        <header class="w3-container w3-blue w3-xxxlarge">
-          <h4 w3-xxxlarge>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</h4>
-        </header>
-        <header class="w3-container w3-red w3-xxlarge">
-          <?php
-          if(isset($_GET["m"])){
-          ?>
-          <h4><?=$_GET["m"]?></h4>
-          <?php
-          }
-          ?>
-        </header>
-        <div class="w3-container w3-xxxlarge">
-          <form class="w3-container" action="votar.php" method="post">
-            <p>
-              <label class="w3-text-grey">Introduïx el teu DNI amb la lletra</label>
-              <input class="w3-input w3-border" type="text" required="" name="dni">
-            </p>
-            <p><input type="submit" class="w3-btn w3-padding w3-blue" value="SEGÜENT"></p>
-          </form></p>
-        </div>
-        <footer class="w3-container w3-blue w3-center">
-          <img src="img/logo_ampa.jpg" alt="AMPA" width="25%">
-        </footer>
-      </div>
+    <header class="w3-top w3-bar w3-theme w3-center">
+
+      <?php
+      if(isset($_GET["m"])){
+      ?>
+      <h2 class="w3-bar-item w3-center w3-red"><?=$_GET["m"]?></h2>
+      <?php
+      }else{
+      ?>
+      <h2 class="w3-bar-item w3-center">Consulta no vinculant</h2>
+      <?php
+      }
+      ?>
+    </header>
+    <div class="w3-container w3-center" style="margin-top:90px">
+      <hr>
+      <p>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</p>
+      <form class="w3-container" action="votar.php" method="post">
+        <p>
+          <label class="w3-text-grey">Introduïx el teu DNI amb la lletra</label>
+          <input class="w3-input w3-border" type="text" required="" name="dni">
+        </p>
+        <p><input type="submit" class="w3-btn w3-padding w3-blue" value="SEGÜENT"></p>
+      </form>
     </div>
+    <footer class="w3-container w3-bottom w3-theme w3-margin-top w3-center">
+      <img  class="" src="img/logo_ampa.jpg" alt="AMPA" width="100%">
+    </footer>
   </body>
 </html>
