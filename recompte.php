@@ -1,9 +1,20 @@
 <?php
+$incorrecto=true;
+$mensaje="";
 //Recuento
-$resultadoSI=$mysqli->query("SELECT count(voto) as si from padres where voto='si'");
-$votoSI=$resultadoSI->fetch_assoc();
-$resultadoNO=$mysqli->query("SELECT  count(voto) as no from padres where voto='no'");
-$votoNO=$resultadoNO->fetch_assoc();
+$mysqli = new mysqli("localhost", "root", "", "ampaplatero");
+if ($mysqli->connect_errno) {
+    $mensaje="En estos momentos no podemos almacenar tu voto. Prueba en 5 minutos";
+}else{
+  $resultadoSI=$mysqli->query("SELECT count(voto) as si from padres where voto='si'");
+  $votoSI=$resultadoSI->fetch_assoc();
+  $resultadoNO=$mysqli->query("SELECT  count(voto) as no from padres where voto='no'");
+  $votoNO=$resultadoNO->fetch_assoc();
+  $incorrecto=false;
+}
+if($incorrecto){
+  header('Location: index.php?m='.$mensaje);
+}
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
