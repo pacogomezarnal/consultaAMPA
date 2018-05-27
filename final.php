@@ -45,10 +45,10 @@ if($incorrecto){
     <header class="w3-top w3-bar w3-theme w3-center">
       <h2 class="w3-bar-item w3-center <?php echo ($incorrecto)?"w3-red":"w3-green";?>"><?=$mensaje?></h2>
     </header>
-    <div class="w3-container" style="margin-top:90px">
-      <h1>DNI: <?=$_POST["dni"]?></h1>
-      <h1>OPINIÓ: <?=$_POST["eleccion"]?></h1>
-      <h1>DATA: <?=date("Y-m-d H:i:s")?></h1>
+    <div class="w3-container" style="margin-top:120px">
+      <h2>DNI: <?=$_POST["dni"]?></h2>
+      <h2>OPINIÓ: <?=$_POST["eleccion"]?></h2>
+      <h2>DATA: <?=date("Y-m-d H:i:s")?></h2>
     </div>
     <footer class="w3-container w3-bottom w3-theme w3-margin-top w3-center">
       <img  class="" src="img/logo_ampa.jpg" alt="AMPA" width="100%">
