@@ -33,6 +33,7 @@ if($incorrecto){
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+    <link rel="stylesheet" href="/css/estilos.css">
   </head>
   <body>
     <header class="w3-top w3-bar w3-theme w3-center">
