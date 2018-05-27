@@ -38,7 +38,7 @@ if($incorrecto){
     <header class="w3-top w3-bar w3-theme w3-center">
       <h2 class="w3-bar-item w3-center">DNI: <?=$dni?></h2>
     </header>
-    <div class="w3-container">
+    <div class="w3-container" style="margin-top:90px">
       <form  action="final.php" method="post">
         <p>
           <label class="w3-text-black">Horari proposat: els matins es mantenen igual sols es modifica l’horari de les vesprades de dilluns a dijous de 15:00 a 16:30.</label>
