@@ -36,11 +36,8 @@ if($incorrecto){
   </head>
   <body>
     <header class="w3-top w3-bar w3-theme w3-center">
-      <h2 class="w3-bar-item w3-center w3-red">DNI: <?=$dni?></h2>
+      <h2 class="w3-bar-item w3-center">DNI: <?=$dni?></h2>
     </header>
-    <div class="w3-container w3-center" style="margin-top:90px">
-      <p>Necessitem saber la vostra opinió respecte a la proposta de canvi d’horari, per part del Claustre de Professorat. Per tant, vos convoquem a que l’expresseu a través d’una consulta no vinculant, per orientar als representants dels pares/mares al Consell Escolar.</p>
-    </div>
     <div class="w3-container">
       <form  action="final.php" method="post">
         <p>
