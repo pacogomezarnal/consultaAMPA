@@ -32,8 +32,13 @@ if($incorrecto){
       <h2 class="w3-bar-item w3-center">Recompte</h2>
     </header>
     <div class="w3-container" style="margin-top:120px">
-      <h2>SI: <?=$votoSI["si"]?></h2>
-      <h2>NO: <?=$votoNO["no"]?></h2>
+      <?php
+      $total=$votoSI["si"]+$votoNO["no"];
+      $percSI=(100*$votoSI["si"])/$total;
+      $percNO=100-$percSI;
+      ?>
+      <h2>SI: <?php echo "$votoSI['si'] ($percSI% dels que han opinat)";?></h2>
+      <h2>NO: <?php echo "$votoNO['no'] ($percNO% dels que han opinat)";?></h2>
     </div>
     <footer class="w3-container w3-bottom w3-theme w3-margin-top w3-center">
       <img  class="" src="img/logo_ampa.jpg" alt="AMPA" width="100%">
